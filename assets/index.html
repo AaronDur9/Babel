@@ -14,10 +14,17 @@
     <meta name="description" content="babel example project">
     <meta name="keywords" content="babel, example, html5, css3, js">
     <title>The Avengers</title>
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/grid.css">
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/forms.css">
+    <link rel="stylesheet" href="styles/team.css">
+    <link rel="stylesheet" href="styles/movies.css">
+    <link rel="stylesheet" href="styles/about-us.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Oswald:200,300,400,500,600,700" rel="stylesheet">
 </head>
 
 <body>
@@ -35,105 +42,130 @@
         <h1>The Avengers</h1>
     </header>
     <main>
-        <section id="about-us">
+        <section id="about-us" class="container">
             <header>
                 <h2>About Us</h2>
             </header>
-            <video src="assets/video/video.mp4" controls>
-            </video>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit recusandae nam repellendus provident magnam veniam, iusto accusantium, commodi tenetur!</p>
+            <div class="row">
+                <div class="col-6">
+                    <video src="assets/video/video.mp4" controls>
+                    </video>
+                </div>
+                <div class="col-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, placeat. Velit assumenda earum ab, consequuntur sint esse amet optio beatae deleniti accusamus impedit vero ducimus unde corrupti quaerat deserunt, et.</p>
+                </div>
+            </div>
         </section>
-        <section id="team">
+        <section id="team" class="container-fluid">
             <header>
                 <h2>Team</h2>
             </header>
-            <article>
-                <img src="assets/img/profiles/ironman.jpg" alt="Iron Man">
-                <h3>Iron Man</h3>
-                <cite>Robert Downey Jr.</cite>
-                <p>A self-described genius, billionaire, playboy, and philanthropist with an electromechanical suit of armor of his own invention</p>
-            </article>
-            <article>
-                <img src="assets/img/profiles/capitan-america.jpg" alt="Capitán América">
-                <h3>Capitán América</h3>
-                <cite>Chris Evans</cite>
-                <p>A World War II veteran who was enhanced to the peak of human physicality by an experimental serum and frozen in suspended animation before waking up in the modern world</p>
-            </article>
-            <article>
-                <img src="assets/img/profiles/black-widow.jpg" alt="Viuda Negra">
-                <h3>Viuda Negra</h3>
-                <cite>Scarlett Johansson</cite>
-                <p>A highly trained spy working for S.H.I.E.L.D</p>
-            </article>
-            <article>
-                <img src="assets/img/profiles/thor.jpg" alt="Thor">
-                <h3>Thor</h3>
-                <cite>Chris Hemsworth</cite>
-                <p>The crown prince of Asgard, based on the Norse mythological deity of the same name</p>
-            </article>
-            <article>
-                <img src="assets/img/profiles/hulk.jpg" alt="Hulk">
-                <h3>Hulk</h3>
-                <cite>Mark Ruffalo</cite>
-                <p>A genius scientist who, because of exposure to gamma radiation, transforms into a monster when enraged or agitated</p>
-            </article>
-            <article>
-                <img src="assets/img/profiles/hawk-eye.jpg" alt="Clint Barton Hawkeye">
-                <h3>Clint Barton Hawkeye</h3>
-                <cite>Jeremy Renner</cite>
-                <p>A master archer working as an agent for S.H.I.E.L.D</p>
-            </article>
+            <div class="row">
+                <article class="col-2">
+                    <img src="assets/img/profiles/ironman.jpg" alt="Iron Man">
+                    <h3>Iron Man</h3>
+                    <cite>Robert Downey Jr.</cite>
+                    <p>A self-described genius, billionaire, playboy, and philanthropist with an electromechanical suit of armor of his own invention</p>
+                </article>
+                <article class="col-2">
+                    <img src="assets/img/profiles/capitan-america.jpg" alt="Capitán América">
+                    <h3>Capitán América</h3>
+                    <cite>Chris Evans</cite>
+                    <p>A World War II veteran who was enhanced to the peak of human physicality by an experimental serum and frozen in suspended animation before waking up in the modern world</p>
+                </article>
+                <article class="col-2">
+                    <img src="assets/img/profiles/black-widow.jpg" alt="Viuda Negra">
+                    <h3>Viuda Negra</h3>
+                    <cite>Scarlett Johansson</cite>
+                    <p>A highly trained spy working for S.H.I.E.L.D</p>
+                </article>
+                <article class="col-2">
+                    <img src="assets/img/profiles/thor.jpg" alt="Thor">
+                    <h3>Thor</h3>
+                    <cite>Chris Hemsworth</cite>
+                    <p>The crown prince of Asgard, based on the Norse mythological deity of the same name</p>
+                </article>
+                <article class="col-2">
+                    <img src="assets/img/profiles/hulk.jpg" alt="Hulk">
+                    <h3>Hulk</h3>
+                    <cite>Mark Ruffalo</cite>
+                    <p>A genius scientist who, because of exposure to gamma radiation, transforms into a monster when enraged or agitated</p>
+                </article>
+                <article class="col-2">
+                    <img src="assets/img/profiles/hawk-eye.jpg" alt="Clint Barton Hawkeye">
+                    <h3>Clint Barton Hawkeye</h3>
+                    <cite>Jeremy Renner</cite>
+                    <p>A master archer working as an agent for S.H.I.E.L.D</p>
+                </article>
+            </div>
         </section>
-        <section id="movies">
+        </div>
+        <section id="movies" class="container">
             <header>
                 <h2>Movies</h2>
-                <article>
+            </header>
+            <div class="row">
+                <article class="col-6">
                     <img src="assets/img/movie1.jpg" alt="The Avengers 2012">
                     <h3>The Avengers
                     <time datetime="2012-01-01">(2012)</time></h3>
                     <p>Nick Fury, the director of S.H.I.E.L.D., gathers the superheroes Iron Man, Thor, Captain America, the Hulk, Black Widow and Hawkeye to fight Thor's brother Loki, who plots to subjugate the Earth.</p>
                 </article>
-                <article>
+                <article class="col-6">
                     <img src="assets/img/movie2.jpg" alt=">Avengers: Age of Ultron 2015">
                     <h3>Avengers: Age of Ultron <time datetime="2015-01-01">(2012)</time>
 </h3>
                     <p>Iron Man, Captain America, Thor, the Hulk, Black Widow, and Hawkeye must work together as the Avengers to defeat Ultron, a technological enemy bent on human extinction, while encountering the powerful twins Pietro and Wanda Maximoff, as well as the new entity Vision.</p>
                 </article>
-            </header>
+            </div>
         </section>
-        <section id="contact">
-            <header>
+        <section id="contact" class="container">
+            <header class="row">
                 <h2>Contact</h2>
             </header>
-            <form>
-                <label for="name">Full Name</label>
-                <input type="text" name="name" id="name" placeholder="Tell us your name" required>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Tell us your email" required pattern="[a-zA-Z0-9_\.\+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-\.]+">
-                <label for="male">Male</label>
-                <input type="radio" name="gender" id="male" value="male">
-                <label for="female">Female</label>
-                <input type="radio" name="gender" id="female" value="female">
-                <label for="birthday">birthdate</label>
-                <input type="date" name="birthdate" id="birthdate">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="What do you need?"></textarea>
-                <button type="submit">Send!</button>
-            </form>
+            <div class="row">
+                <form action="//backend.com/conntact" class="col-offset-2 col-8">
+                    <div class="form-input">
+                        <label for="name">Full name</label>
+                        <input type="text" name="name" id="name" placeholder="Tell us your name" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Tell us your email" required pattern="[a-zA-Z0-9_\.\+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-\.]+">
+                    </div>
+                    <div class="form-radio">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="male" value="male" required>
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="female" value="female" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="birthdate">birthdate</label>
+                        <input type="date" name="birthdate" id="birthdate" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="message">message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="What do you need?" required></textarea>
+                    </div>
+                    <button class="button" type="submit">Send!</button>
+                </form>
+            </div>
         </section>
     </main>
-    <footer>
-        <ul>
-            <li><a href="http://marvel.com/avengers" target="_blank"> Website </a></li>
-            <li><a href="https://www.facebook/avengers/" target="_blank">Facebook </a></li>
-            <li><a href="https://www.twitter.com/avengers" target="_blank">Twitter </a></li>
-            <li><a href="https://www.instagram.com/avengersmovie" target="_blank">Instagram </a></li>
-        </ul>
-        <p>
-            <mark>Marvel Studios
-                <time datetime="2017-01-01">2017</time>
-            </mark>
-        </p>
+    <footer id="footer" class="container-fluid footer">
+        <div class="row">
+            <ul class="footer-items col-8">
+                <li class="footer-item"><a href="http://marvel.com/avengers" target="_blank"> Website </a></li>
+                <li class="footer-item"><a href="https://www.facebook/avengers/" target="_blank">Facebook </a></li>
+                <li class="footer-item"><a href="https://www.twitter.com/avengers" target="_blank">Twitter </a></li>
+                <li class="footer-item"><a href="https://www.instagram.com/avengersmovie" target="_blank">Instagram </a></li>
+            </ul>
+            <p class="footer-copyright col-4">
+                <mark>Marvel Studios
+                    <time datetime="2017-01-01">2017</time>
+                </mark>
+            </p>
+        </div>
     </footer>
 </body>
 
