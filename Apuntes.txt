@@ -2,6 +2,7 @@ Plugins:
 - prettify html
 - boiler html
 -gitGutter
+-emmet
 
 Para aprender Markdown:
 https://stackedit.io
@@ -26,3 +27,12 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 Centrando con flexbox:
 https://css-tricks.com/centering-css-complete-guide/
+
+Referencias de css:
+http://cssreference.io/
+
+Generar triángulos en css:
+http://apps.eky.hk/css-triangle-generator/
+
+Plantilla cv:
+http://codepen.io/anthanh/pen/rygyPQ

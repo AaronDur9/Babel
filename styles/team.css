@@ -5,6 +5,7 @@
     object-position: 80% 50%;
     transition: transform 0.3s;
     will-change: transform;
+    position: absolute;
 }
 
 #team article:after {
@@ -31,6 +32,15 @@
 #team article {
     position: relative;
     overflow: hidden;
+    height: 70vh;
+}
+
+#team {
+    font-size: 1em;
+}
+
+#team article {
+    font-size: 0.9em;
 }
 
 

@@ -16,6 +16,7 @@ h1 {
 h2 {
     font-size: 30px;
     text-align: center;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
@@ -35,10 +36,6 @@ h6 {
     font-size: 16px;
 }
 
-#team {
-    font-size: 1em;
-}
-
-#team article {
-    font-size: 0.9em;
+section {
+    padding-top: 72px;
 }

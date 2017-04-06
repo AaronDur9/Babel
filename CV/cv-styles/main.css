@@ -1,0 +1,15 @@
+body {
+    display: flex;
+}
+
+#left {
+    width: 30vw;
+    height: 100vh;
+    background-color: lightgreen;
+}
+
+#right {
+    width: 70vw;
+    height: 100vh;
+    background-color: lightblue;
+}
