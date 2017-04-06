@@ -27,6 +27,7 @@ form label {
 }
 
 .form-input input, .form-input textarea {
+    transition: border-color 0.5s;
     border-radius: 8px;
     border: 2px solid #ccc;
     font-size: 0.9em;
@@ -47,6 +48,8 @@ form label {
 }
 
 .button {
+    transition: transform 0.3s, border-color 0.3s;
+    will-change: transform, border-color;
     cursor: pointer;
     background-color: white;
     border: 2px solid #ddd;
@@ -55,12 +58,17 @@ form label {
     border-radius: 5px;
 }
 
+.button:hover {
+    transform: scale(1.2);
+}
+
 .button:hover, .button:focus {
     border-color: #ccc;
     outline: none;
 }
 
 .button:active {
+    transform: scale(0.9);
     color: white;
     background-color: #999;
 }

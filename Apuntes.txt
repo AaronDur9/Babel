@@ -1,0 +1,28 @@
+Plugins:
+- prettify html
+- boiler html
+-gitGutter
+
+Para aprender Markdown:
+https://stackedit.io
+
+Para la parte visual:
+www.dribbble.com (gráfico en jpg)
+www.codepen.com (implementado en html,...) --IMPORTANTE
+www.zurb.com (plantilla para página web)
+
+Para ver transiciones:
+http://cubic-bezier.com
+
+
+Para saber en qué navegadores puedes utilizar una propiedad o tecnologías:
+www.caniuse.com
+
+Animaciones:
+https://daneden.github.io/animate.css/
+
+Flexbox:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Centrando con flexbox:
+https://css-tricks.com/centering-css-complete-guide/
