@@ -54,3 +54,42 @@ function argumentsArray() {
 }
 
 argumentsArray(1, 2, 4, 'string');
+
+
+
+
+/*
+Creamos un listener que ejecute la función pasada como segundo parámetro cuando pulsen el botón.
+En este caso utilizamos una función que devuelve otra para crear un contexto de clausura.
+Esto nos sirve para obligar a que la 'i' esté en el contexto y muestre la correspondiente n cada iteración del for
+ */
+for (var i = 0; i < 5; i++) {
+    var btn = document.createElement('button');
+    btn.appendChild(document.createTextNode('Button ' + i));
+    btn.addEventListener('click', (function(i) {
+        return function() {
+            console.log(i);
+        };
+    })(i));
+
+
+    document.body.appendChild(btn);
+}
+
+
+/*
+Todos nuestros archivos javascript vamos a meterlos dentro de un contexto de clausura como este para asegurarnos que nuestras variables nunca salen de nuestro contexto
+Conseguimos que nuestras dos variables globales casa y pepe no colisiones con otras que puedan llamarse igual en otros ficheros javascript.
+
+
+////////////////////////////
+immediately invoked function (iif)
+(function() {
+var casa;
+var pepe;
+
+
+
+})();
+/////////////////////////////
+ */
