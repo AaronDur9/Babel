@@ -1,0 +1,59 @@
+    #tags {
+        padding: 10px;
+        width: 70%;
+        margin: auto;
+    }
+    
+    .tag {
+        display: inline-block;
+        background: #F95;
+        color: #FFF;
+        padding: 5px 10px;
+        margin: 2px 2px 2px 20px;
+        position: relative;
+        cursor: default;
+        box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s, transform 0.3s;
+        will-change: box-shadow, transform;
+    }
+    
+    .tag:hover {
+        box-shadow: 10px 10px 40px #444;
+        transform: scale(1.02);
+    }
+    
+    .tag:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        background: inherit;
+        height: 10px;
+        border: 10px solid #908484;
+        border-right-color: transparent;
+        left: -20px;
+        top: 0;
+    }
+    
+    .tag:after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        background: #FFF;
+        position: absolute;
+        left: -3px;
+        top: 12px;
+        box-shadow: inset 1px 1px 0 #CCC;
+    }
+    
+    #skills .flexbox-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    #skills .flexbox-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }

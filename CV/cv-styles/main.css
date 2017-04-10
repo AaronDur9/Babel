@@ -1,15 +1,22 @@
 body {
-    display: flex;
+    background: rgba(90, 84, 84, .7);
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5em;
+    font-family: 'Raleway', sans-serif;
 }
 
-#left {
-    width: 30vw;
-    height: 100vh;
-    background-color: lightgreen;
+h1, h2, h3, h4. h5, h6 {
+    font-family: 'Open Sans', sans-serif;
 }
 
-#right {
-    width: 70vw;
-    height: 100vh;
-    background-color: lightblue;
+h2 {
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    padding-top: 150px;
 }

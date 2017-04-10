@@ -1,0 +1,21 @@
+#personal-details .flexbox-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#personal-details .flexbox-row .icon-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#personal-details .icon-info p {
+    font-size: 1.2em;
+}
+
+#personal-details .icon-info i, #personal-details .icon-info img {
+    font-size: 36px;
+}

@@ -30,69 +30,9 @@ CV
 
 
     Hacemos los radio button para que elija poner fecha de nacimiento o edad, y según lo que selecciona haces aparecer con js un input u otro
-  /!-->
 
-<head>
-    <meta charset="utf-8">
-    <title>Curriculum vitae</title>
-</head>
 
-<body>
-    <header id="home">
-        <h1>CV</h1>
-    </header>
-    <section id="left">
-        <section id="datos-contacto">
-            <header>
-                <h2>Datos de contacto</h2>
-            </header>
-            <p>Aarón Durán Sánchez</p>
-            <p>07/04/1995</p>
-            <p>C/ Quesada Nº10 2º Ext. Izq., Madrid</p>
-            <p>Tlf: 685975218</p>
-            <p>
-                <time datetime="1995-04-07">07/04/1995</time>
-            </p>
-        </section>
-    </section>
-    <section id="right">
-        <section>
-            <header id="resumen-profesional">
-                <h2>Resumen profesional</h2>
-            </header>
-            <article>
-                <p> Actualmente incorporado en Babel con la iniciativa Babelcamp (2017)</p>
-            </article>
-            <article>
-                <p> Ganador en HackForGood a la mejor aplicación en educación, cultura y sociedad abierta (2017) </p>
-            </article>
-            <article>
-                <p> Colaboración actual con la cátedra de Telefónica sobre juegos serios para la realización de mi TFG en Unity (2016 - 2017)</p>
-            </article>
-            <article>
-                <p> Trabajo temporal durante verano como mano de obra en una empresa de lacado de metales (2012 - 2016)</p>
-            </article>
-            <article>
-                <p> Experiencia como profesor particular en Matemáticas y Química (2015)</p>
-            </article>
-
-        </section>
-        <section>
-            <header id="formacion">
-                <h2>Formación</h2>
-            </header>
-
-            <h3>Actualmente en último curso de Ingeniería Informática, Especialidad en Tecnología de la Información.</h3>
-            <p>Facultad de Informática. Universidad Complutense de Madrid. </p>
-            <p>Nota media actual: 8</p>
-
-        </section>
-
-        <section>
-            <header>
-                <h2>Habilidades y aptitudes</h2>
-            </header>
-            <ul>
+       <ul>
                 <li>En mi repositorio de github se pueden encontrar aplicaciones como:
                     <ul>
                         <li>PokerTrainer, un Framework de Poker desarrollado en Java para diseñar bots</li>
@@ -108,9 +48,190 @@ CV
                 <li>Disponibilidad para viajar y cambiar de residencia</li>
             </ul>
 
-        </section>
-    </section>
+  /!-->
 
+<head>
+    <meta charset="utf-8">
+    <title>Curriculum vitae</title>
+
+    <link rel="stylesheet" href="cv-styles/normalize.css">
+    <link rel="stylesheet" href="cv-styles/grid.css">
+    <link rel="stylesheet" href="cv-styles/nav.css">
+    <link rel="stylesheet" href="cv-styles/skills.css">
+
+    <link rel="stylesheet" href="cv-styles/main.css">
+    <link rel="stylesheet" href="cv-styles/personal-details.css">
+    <link rel="stylesheet" href="cv-styles/experience.css">
+    <link rel="stylesheet" href="cv-styles/education.css">
+    <link rel="stylesheet" href="cv-styles/forms.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+        <a class="nav-logo" href="#personal-details"><img src="Images/MyPicture.jpg" alt="Profile Picture"></a>
+        <h1 id="my-name">AARÓN DURÁN SÁNCHEZ</h1>
+        <ul class="nav-items">
+            <li class="nav-item nav-item--active"><a href="#personal-details">Personal Details</a></li>
+            <li class="nav-item"><a href="#experience">Work Experience</a></li>
+            <li class="nav-item"><a href="#education">Education</a></li>
+            <li class="nav-item"><a href="#skills">Skills</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="personal-details" class="container">
+            <header>
+                <h2>Personal Details</h2>
+            </header>
+            <div class="flexbox-row">
+                <div class="icon-info">
+                    <i class="material-icons">call_end</i>
+                    <p>685975218</p>
+                </div>
+                <div class="icon-info">
+                    <i class="material-icons">email</i>
+                    <p>aaron.duran@babel.es</p>
+                </div>
+
+
+                <div class="icon-info">
+                    <i class="fa fa-home"></i>
+                    <p>C/ Quesada Nº10 2º Ext. Izq., Madrid</p>
+                </div>
+            </div>
+            <div class="flexbox-row">
+                <div class="icon-info">
+                    <i class="fa fa-birthday-cake"></i>
+                    <p>
+                        <time datetime="1995-04-07">07/04/1995</time>
+                    </p>
+                </div>
+                <div class="icon-info">
+                    <img src="Icons/GitHub.png" alt="Personal GitHub">
+                    <p>https://github.com/AaronDur9</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="experience">
+            <header>
+                <h2>Work Experience</h2>
+            </header>
+
+
+            <article class="flexbox-row">
+                <p> Actualmente incorporado en Babel con la iniciativa Babelcamp </p>
+                <time>2017</time>
+            </article>
+            <article class="flexbox-row">
+                <p> Ganador en HackForGood a la mejor aplicación en educación, cultura y sociedad abierta</p>
+                <time>2017</time>
+            </article>
+            <article class="flexbox-row">
+                <p> Colaboración actual con la cátedra de Telefónica sobre juegos serios para la realización de mi TFG en Unity</p>
+                <time>2016 - 2017</time>
+            </article>
+            <article class="flexbox-row">
+                <p> Trabajo temporal durante verano como mano de obra en una empresa de lacado de metales</p>
+                <time>2012 - 2017</time>
+            </article>
+            <article class="flexbox-row">
+                <p> Experiencia como profesor particular en Matemáticas y Química</p>
+                <time>2015</time>
+            </article>
+
+
+        </section>
+        <section id="education">
+            <header>
+                <h2>Education</h2>
+            </header>
+            <article>
+                <p>Actualmente en último curso de <strong>Ingeniería Informática</strong>, Especialidad en Tecnología de la Información.</p>
+                <p>Facultad de Informática. Universidad Complutense de Madrid. </p>
+                <p>Nota media actual: 8</p>
+            </article>
+        </section>
+
+        <section id="skills">
+            <header>
+                <h2>Skills</h2>
+            </header>
+
+
+            <div class="flexbox-col">
+                <div id="tags" class="flexbox-row">
+
+                    <span class="tag"> HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">Javascript</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">MongoDB</span>
+
+
+
+                </div>
+                <div id="tags" class="flexbox-row">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">C/C++</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">SQL</span>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+
+            <header class="row">
+                <h2>Contact</h2>
+            </header>
+
+            <div class="row">
+                <form class="col-offset-2 col-8" novalidate>
+
+                    <div class="form-input">
+                        <label for="name">Full name</label>
+                        <input type="text" name="name" id="name" placeholder="Tell us your name" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Tell us your email" required pattern="[a-zA-Z0-9_\.\+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-\.]+">
+                    </div>
+
+                    <div class="form-radio">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="male" value="male" required>
+
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="female" value="female" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="birthdate">birthdate</label>
+                        <input type="date" name="birthdate" id="birthdate" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="message">message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="What do you need?" required></textarea>
+                    </div>
+
+                    <button class="button" type="submit">Send!</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
 
 </body>
 
