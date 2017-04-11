@@ -1,6 +1,9 @@
 body {
     /*background: rgba(90, 84, 84, .7);*/
-    background: #F95;
+    background-image: url(../Images/desert.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
     height: 100%;
     width: 100%;
     font-size: 15px;
@@ -13,20 +16,27 @@ h1, h2, h3, h4. h5, h6 {
 }
 
 h1 {
+    color: #ea7527;
     font-size: 40px;
     text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
+    color: #ea7527;
     font-size: 30px;
     text-align: center;
     text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    color: #ea7527;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 section {
     margin-top: 20px;
     padding-top: 60px;
     padding-bottom: 10px;
-    background-color: rgba(90, 84, 84, 1);
+    background-color: rgba(90, 84, 84, 0.6);
     border-radius: 50px 50px 50px 50px;
 }

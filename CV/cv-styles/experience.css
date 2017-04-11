@@ -16,5 +16,9 @@
 
 #experience article:hover {
     box-shadow: 30px 10px 40px #444;
-    border-color: #4D0A32;
+    border-color: #ea7527;
+}
+
+#experience article:hover p, #experience article:hover number {
+    /*color: #ea7527;*/
 }

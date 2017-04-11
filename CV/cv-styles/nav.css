@@ -19,7 +19,7 @@
 .nav .nav-item > a {
     transition: background-color 0.3s, color 0.3s;
     will-change: background-color, color;
-    color: white;
+    color: #ea7527;
     text-decoration: none;
     height: 100%;
     padding: 10px;
