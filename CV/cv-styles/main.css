@@ -1,5 +1,6 @@
 body {
-    background: rgba(90, 84, 84, .7);
+    /*background: rgba(90, 84, 84, .7);*/
+    background: #F95;
     height: 100%;
     width: 100%;
     font-size: 15px;
@@ -11,6 +12,11 @@ h1, h2, h3, h4. h5, h6 {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1 {
+    font-size: 40px;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
 h2 {
     font-size: 30px;
     text-align: center;
@@ -18,5 +24,9 @@ h2 {
 }
 
 section {
-    padding-top: 150px;
+    margin-top: 20px;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    background-color: rgba(90, 84, 84, 1);
+    border-radius: 50px 50px 50px 50px;
 }

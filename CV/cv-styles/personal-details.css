@@ -1,21 +1,26 @@
-#personal-details .flexbox-row {
+#personal-details > div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
 }
 
-#personal-details .flexbox-row .icon-info {
+#personal-details div .icon-info {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    width: 33%;
 }
 
 #personal-details .icon-info p {
     font-size: 1.2em;
 }
 
-#personal-details .icon-info i, #personal-details .icon-info img {
+#personal-details .icon-info i {
     font-size: 36px;
+}
+
+#personal-details .icon-info img {
+    width: 36px;
 }

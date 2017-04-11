@@ -23,7 +23,7 @@
     text-decoration: none;
     height: 100%;
     padding: 10px;
-    line-height: 3em;
+    line-height: 1em;
     display: inline-block;
     text-transform: uppercase;
 }
@@ -33,36 +33,10 @@
     color: black;
 }
 
-.nav .nav-logo {
-    display: inline-block;
-    /*margin-left: 25px;*/
-}
-
 .nav .nav-items {
     padding: 0;
     width: 80%;
     display: inline-block;
-    text-align: right;
+    text-align: center;
     margin: 0;
 }
-
-.nav .nav-logo img {
-    height: 130px;
-    width: 110px;
-    /*top: 50px;*/
-    position: relative;
-    overflow: hidden;
-    border: 0.1px solid #DDD;
-    padding: 2px;
-    background: #FFF;
-    border-radius: 50%;
-    box-shadow: 0 1px 3px 0*/
-}
-
-#my-name {
-    display: inline-block;
-    position: relative;
-    left: 0;
-}
-
-.nav .nav-logo img a:hover {}

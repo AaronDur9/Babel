@@ -43,6 +43,9 @@ http://codepen.io/anthanh/pen/rygyPQ
 Guía de estilo para js:
 https://github.com/airbnb/javascript
 
+Videoconferencia online:
+appear.in
+
 
 
 //////////////////Ejemplo de contexto en funciones////////////////////
@@ -72,3 +75,16 @@ Se podría solucionar con fn.call(obj)-> Al utilizar call le indico el contexto 
 
 Añadimos esto al principio de los archivos js para que no haga cosas raras como subir las declaraciones de variables.
  'use strict'
+
+
+Requisitos:
+-Mucho html
+-grid y flexbox
+-css: animacion y transicio
+-js: 2 opciones con checkbox en formulario y que según pulses una u otra aparezcan opciones en el formulario.
+-validar formulario con js
+
+
+
+
+Hacer un div con los 6 elementos flex, cada elemento el 33% y con wrap

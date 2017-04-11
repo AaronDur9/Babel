@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <html>
 <!--
+
+ <div class="flexbox-row">
+                <div class="icon-info">
+                    <i class="material-icons">call_end</i>
+                    <p>685975218</p>
+                </div>
+                <div class="icon-info">
+                    <i class="material-icons">email</i>
+                    <p>aaron.duran@babel.es</p>
+                </div>
+
+
+                <div class="icon-info">
+                    <i class="fa fa-home"></i>
+                    <p>C/ Quesada Nº10 2º Ext. Izq., Madrid</p>
+                </div>
+            </div>
+            <div class="flexbox-row">
+                <div class="icon-info">
+                    <i class="fa fa-birthday-cake"></i>
+                    <p>
+                        <time datetime="1995-04-07">07/04/1995</time>
+                    </p>
+                </div>
+                <div class="icon-info">
+                    <img src="Icons/GitHub.png" alt="Personal GitHub">
+                    <p>https://github.com/AaronDur9</p>
+                </div>
+                <div class="icon-info">
+                    <img src="Icons/linkedin.png" alt="Personal GitHub">
+                    <p>https://github.com/AaronDur9</p>
+                </div>
+            </div>
+
+
+
+
+
 CV
 
 -header
@@ -60,6 +98,7 @@ CV
     <link rel="stylesheet" href="cv-styles/skills.css">
 
     <link rel="stylesheet" href="cv-styles/main.css">
+    <link rel="stylesheet" href="cv-styles/home.css">
     <link rel="stylesheet" href="cv-styles/personal-details.css">
     <link rel="stylesheet" href="cv-styles/experience.css">
     <link rel="stylesheet" href="cv-styles/education.css">
@@ -72,22 +111,31 @@ CV
 
 <body>
     <nav class="nav" id="nav">
-        <a class="nav-logo" href="#personal-details"><img src="Images/MyPicture.jpg" alt="Profile Picture"></a>
-        <h1 id="my-name">AARÓN DURÁN SÁNCHEZ</h1>
-        <ul class="nav-items">
-            <li class="nav-item nav-item--active"><a href="#personal-details">Personal Details</a></li>
+        <ul class="nav-item">
+            <li class="nav-item"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#personal-details">Personal Details</a></li>
             <li class="nav-item"><a href="#experience">Work Experience</a></li>
             <li class="nav-item"><a href="#education">Education</a></li>
             <li class="nav-item"><a href="#skills">Skills</a></li>
             <li class="nav-item"><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <main>
-        <section id="personal-details" class="container">
+    <main class="container">
+
+
+        <section id="home">
+            <div id="div-home" class="container-fluid">
+                <img id="homeImg" src="Images/MyPicture.jpg" alt="Profile Picture">
+                <h1 id="my-name">AARÓN DURÁN SÁNCHEZ</h1>
+                <h2 class="home-text">Ingeniero Informático</h2>
+                <p class="home-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam architecto labore aperiam at iusto iste nulla praesentium tempora incidunt molestias nisi, odio repellendus eaque, maiores magnam recusandae asperiores dolorum inventore. Nesciunt rerum quas ducimus facilis at a aliquid, blanditiis impedit eos doloremque, tempora architecto, dignissimos! Excepturi nostrum saepe et, fugit.</p>
+            </div>
+        </section>
+        <section id="personal-details">
             <header>
                 <h2>Personal Details</h2>
             </header>
-            <div class="flexbox-row">
+            <div>
                 <div class="icon-info">
                     <i class="material-icons">call_end</i>
                     <p>685975218</p>
@@ -102,8 +150,6 @@ CV
                     <i class="fa fa-home"></i>
                     <p>C/ Quesada Nº10 2º Ext. Izq., Madrid</p>
                 </div>
-            </div>
-            <div class="flexbox-row">
                 <div class="icon-info">
                     <i class="fa fa-birthday-cake"></i>
                     <p>
@@ -113,6 +159,10 @@ CV
                 <div class="icon-info">
                     <img src="Icons/GitHub.png" alt="Personal GitHub">
                     <p>https://github.com/AaronDur9</p>
+                </div>
+                <div class="icon-info">
+                    <img src="Icons/linkedin.png" alt="Personal GitHub">
+                    <p>https://linkedin.com/AaronDuran</p>
                 </div>
             </div>
 
@@ -173,18 +223,11 @@ CV
                     <span class="tag">Javascript</span>
                     <span class="tag">PHP</span>
                     <span class="tag">MongoDB</span>
-
-
-
-                </div>
-                <div id="tags" class="flexbox-row">
                     <span class="tag">Java</span>
                     <span class="tag">Python</span>
                     <span class="tag">C/C++</span>
                     <span class="tag">C#</span>
                     <span class="tag">SQL</span>
-
-
                 </div>
             </div>
         </section>
@@ -218,7 +261,7 @@ CV
 
                     <div class="form-input">
                         <label for="birthdate">birthdate</label>
-                        <input type="date" name="birthdate" id="birthdate" required>
+                        <input type="date" name="birthdate" id="birthdate">
                     </div>
 
                     <div class="form-input">
@@ -226,13 +269,38 @@ CV
                         <textarea name="message" id="message" cols="30" rows="10" placeholder="What do you need?" required></textarea>
                     </div>
 
+                    <div id="contact-cuestion" class="form-input">
+                        <label>What do you want?</label>
+                        <select id="reason">
+                            <option value="nothing" selected>
+                                choose an option
+                            </option>
+
+                            <optgroup label="Hire you because...">
+                                <option value="awesome">
+                                    You are awesome!
+                                </option>
+                                <option value="fantastic">You are fantastic!</option>
+                            </optgroup>
+
+                            <optgroup label="Fire you because...">
+                                <option value="shame">
+                                    You are a shame!
+                                </option>
+                                <option value="not you">of me, you are perfect</option>
+                            </optgroup>
+                        </select>
+                    </div>
                     <button class="button" type="submit">Send!</button>
                 </form>
             </div>
 
         </section>
     </main>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/home.js"></script>
 </body>
 
 </html>
