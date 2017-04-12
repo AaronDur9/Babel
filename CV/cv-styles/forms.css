@@ -58,6 +58,41 @@ form label {
     border-radius: 5px;
 }
 
+form #contact-cuestion select {
+    height: 80px;
+    width: 300px;
+    font-size: 1.08em;
+}
+
+form #contact-cuestion select option {
+    font-size: 1.08em;
+}
+
+form #contact-div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+form #contact-cuestion i, form .flex-col i {
+    font-size: 48px;
+    color: #ea7527;
+}
+
+form .img-size {
+    width: 150px;
+    height: 150px;
+}
+
+form .flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .button:hover {
     transform: scale(1.2);
 }
@@ -80,4 +115,96 @@ form label {
 
 .button:hover:disabled {
     border-color: #ddd;
+}
+
+form .img-javi {
+    padding: 3px;
+    will-change: box-shadow, transform;
+}
+
+form .img-javi-hover {
+    animation: showBorder 6s forwards;
+}
+
+@keyframes showBorder {
+    12% {
+        border-top-style: dashed;
+        border-top-width: 5px;
+        border-radius: 20px;
+        border-color: #ea7527;
+        transform: scale(1.02);
+    }
+    24% {
+        border-top-style: dashed;
+        border-top-width: 5px;
+        border-right-style: dashed;
+        border-right-width: 5px;
+        border-radius: 20px;
+        border-color: #ea7527;
+        transform: scale(1.05);
+    }
+    36% {
+        border-top-style: dashed;
+        border-top-width: 5px;
+        border-right-style: dashed;
+        border-right-width: 5px;
+        border-bottom-style: dashed;
+        border-bottom-width: 5px;
+        border-radius: 20px;
+        border-color: #ea7527;
+        transform: scale(1.02);
+    }
+    48% {
+        border-top-style: dashed;
+        border-top-width: 5px;
+        border-right-style: dashed;
+        border-right-width: 5px;
+        border-bottom-style: dashed;
+        border-bottom-width: 5px;
+        border-left-style: dashed;
+        border-left-width: 5px;
+        border-radius: 20px;
+        border-color: #ea7527;
+        transform: scale(1.0);
+    }
+    60% {
+        border-top-style: dashed;
+        border-top-width: 5px;
+        border-radius: 20px;
+        border-color: #ea7527;
+        transform: scale(1.02);
+    }
+    72% {
+        border-top-style: dashed;
+        border-top-width: 5px;
+        border-right-style: dashed;
+        border-right-width: 5px;
+        border-radius: 20px;
+        border-color: #ea7527;
+        transform: scale(1.05);
+    }
+    84% {
+        border-top-style: dashed;
+        border-top-width: 5px;
+        border-right-style: dashed;
+        border-right-width: 5px;
+        border-bottom-style: dashed;
+        border-bottom-width: 5px;
+        border-radius: 20px;
+        border-color: #ea7527;
+        transform: scale(1.02);
+    }
+    100% {
+        border-top-style: dashed;
+        border-top-width: 5px;
+        border-right-style: dashed;
+        border-right-width: 5px;
+        border-bottom-style: dashed;
+        border-bottom-width: 5px;
+        border-left-style: dashed;
+        border-left-width: 5px;
+        border-radius: 20px;
+        border-color: #ea7527;
+        transform: scale(1.0);
+    }
 }

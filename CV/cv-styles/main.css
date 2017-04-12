@@ -18,19 +18,19 @@ h1, h2, h3, h4. h5, h6 {
 h1 {
     color: #ea7527;
     font-size: 40px;
-    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.7);
 }
 
 h2 {
     color: #ea7527;
     font-size: 30px;
     text-align: center;
-    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.7);
 }
 
 h3 {
     color: #ea7527;
-    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 section {

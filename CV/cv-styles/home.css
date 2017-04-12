@@ -60,16 +60,22 @@
     opacity: 1;
 }
 
-#home .home-text {
+#home h2 {
     z-index: 10;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 1.5s;
+}
+
+#home p {
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 2.5s;
 }
 
 #home .home-text p {
     color: #000;
 }
 
-#div-home:hover .home-text {
+#div-home:hover h1, #div-home:hover h2, #div-home:hover p {
     opacity: 1;
 }

@@ -9,6 +9,11 @@ var hover3 = false;
 var hover4 = false;
 var intervalId = null;
 
+console.log(this.id);
+var id = this.id;
+changeStateById(this.id, true);
+var cont = 2;
+
 $("#interests img").mouseover(function() {
     var that = this;
     $('#interests div article img').each(function(index, elem) {
@@ -17,10 +22,7 @@ $("#interests img").mouseover(function() {
 
     });
 
-    console.log(this.id);
-    var id = this.id;
-    changeStateById(this.id, true);
-    var cont = 2;
+
 
     intervalId = setInterval(function() {
         console.log(that);

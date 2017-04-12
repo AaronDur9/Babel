@@ -112,7 +112,8 @@ CV
 <body>
     <nav class="nav" id="nav">
         <ul class="nav-item">
-            <li class="nav-item"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#home
+">Home</a></li>
             <li class="nav-item"><a href="#personal-details">Personal Details</a></li>
             <li class="nav-item"><a href="#experience">Work Experience</a></li>
             <li class="nav-item"><a href="#interests">Interests</a></li>
@@ -230,20 +231,28 @@ CV
                 <h2>Skills</h2>
             </header>
 
+            <div id="tags">
 
-            <div class="flexbox-col">
-                <div id="tags" class="flexbox-row">
-
+                <div class="flexbox-col">
+                    <h3>Web</h3>
                     <span class="tag"> HTML5</span>
                     <span class="tag">CSS3</span>
                     <span class="tag">Javascript</span>
                     <span class="tag">PHP</span>
+                </div>
+
+                <div class="flexbox-col">
+                    <h3>Data Base</h3>
                     <span class="tag">MongoDB</span>
+                    <span class="tag">SQL</span>
+                </div>
+                <div class="flexbox-col">
+                    <h3>Other</h3>
                     <span class="tag">Java</span>
                     <span class="tag">Python</span>
                     <span class="tag">C/C++</span>
                     <span class="tag">C#</span>
-                    <span class="tag">SQL</span>
+
                 </div>
             </div>
         </section>
@@ -255,7 +264,7 @@ CV
             </header>
 
             <div class="row">
-                <form class="col-offset-2 col-8" novalidate>
+                <form class="col-offset-2 col-8">
 
                     <div class="form-input">
                         <label for="name">Full name</label>
@@ -265,24 +274,6 @@ CV
                     <div class="form-input">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="Tell us your email" required pattern="[a-zA-Z0-9_\.\+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-\.]+">
-                    </div>
-
-                    <div class="form-radio">
-                        <label for="male">Male</label>
-                        <input type="radio" name="gender" id="male" value="male" required>
-
-                        <label for="female">Female</label>
-                        <input type="radio" name="gender" id="female" value="female" required>
-                    </div>
-
-                    <div class="form-input">
-                        <label for="birthdate">birthdate</label>
-                        <input type="date" name="birthdate" id="birthdate">
-                    </div>
-
-                    <div class="form-input">
-                        <label for="message">message</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="What do you need?" required></textarea>
                     </div>
 
                     <div id="contact-cuestion" class="form-input">
@@ -303,11 +294,11 @@ CV
                                 <option value="shame">
                                     You are a shame!
                                 </option>
-                                <option value="not you">of me, you are perfect</option>
+                                <option value="not you">Babel doesn´t need you!</option>
                             </optgroup>
                         </select>
                     </div>
-                    <button class="button" type="submit">Send!</button>
+                    <button class="button" type="submit" disabled>Send!</button>
                 </form>
             </div>
 
