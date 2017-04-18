@@ -1,40 +1,61 @@
 'use strict';
 
 const fs = require('fs');
-//path.join se encarga de añaidr y eliminar barras inclinadas
-const path = require('path');
-//función que lea la versión de un módulo.
-function versionModulo(nombreModulo, callback) {
-    const fichero = path.join('./node_modules', nombreModulo, 'package.json');
-    fs.readFile(fichero, 'utf-8', function(err, datos) {
+const async = require('async');
+
+//Require utiliza rutas relativas a este fichero
+const versionModulo = require('./versionModulo');
+
+function versionModulos(callback) {
+
+    //Esta ruta es relativa a la raíz del proyecto.
+    fs.readdir('./node_modules', function(err, lista) {
         if (err) {
             callback(err);
             return;
-        } else {
-            const packageJson = JSON.parse(datos);
-
-            //LLamamos al callback
-            callback(null, packageJson.version);
         }
-    });
+        //console.log(lista);
 
+        //Para cada string de la lista ejecutamos versionModulo.
+        //Concat recibe: un array, la funcióna  ejecutar con cada elemento de este y un callback final.
+        async.concat(lista,
+
+            //Iterador (función a realizar sobre todos los elementos de la lista)
+            function iterador(elemento, callbackIterador) {
+                if (elemento === '.bin') {
+                    callbackIterador(null);
+                    return;
+                }
+                versionModulo(elemento, function(err, version) {
+                    if (err) {
+                        callbackIterador(err);
+                        return;
+                    }
+                    //Ya tenemos la versión del módulo, se la devolvemos al callbackIterator
+                    callbackIterador(null, { version: version, modulo: elemento });
+                    return;
+                });
+
+            },
+            //Finalizador
+            /*function finalizador(err, resultados) {
+                if (err) {
+                    return;
+                }
+                console.log('resultados', resultados);
+
+            }*/
+            callback);
+    });
 }
 
 
-
-
-
-
-
-
-
-
-//Llamamos a la función
-versionModulo('chance', function(err, version) {
+versionModulos(function(err, datos) {
     if (err) {
-        console.log('Error! ', err);
+        console.log('hubo un error', err);
         return;
     }
 
-    console.log('La version de chance es: ', version);
+    console.log('Los modulos son:', datos);
+
 });
