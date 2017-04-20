@@ -5,6 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
+//Conectamos a la base de datos
+require('./lib/connectMongoose');
+require('./models/Agente');
+require('./models/Usuario');
+
 var app = express();
 
 // view engine setup
@@ -26,8 +32,13 @@ app.use(function(req, res, next) {
     //next(new Error('fatal'));//res.send('ok');
 });
 
-*/+
+*/
+
+//Rutas de la aplicación
 app.use('/', require('./routes/index'));
+app.use('/apiv1/agentes', require('./routes/apiv1/agentes'));
+app.use('/apiv1/usuarios', require('./routes/apiv1/usuarios'))
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
