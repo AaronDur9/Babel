@@ -8,7 +8,8 @@ const mongoose = require('mongoose');
 
 
 const Usuario = mongoose.model('Usuario');
-const jwt = require('jsonwentoken');
+const jwt = require('jsonwebtoken');
+const config = require('../../config');
 
 
 module.exports = router;
@@ -34,9 +35,8 @@ router.post('/login', (req,res,next) => {
             return;    
         }
         //Si la clave coincide, creamos un token  JWT
-        jwt.sign({usuario_id: usuario._id}, 'jkasnsauinasincasncasdnsidsidas', {
-            expiresIn: '2d'
-        }, (err,token) => {
+        jwt.sign({usuario_id: usuario._id}, config.jwtSecret, config.jwtConfig
+        , (err,token) => {
             if(err) {
                 next(err);
                 return;

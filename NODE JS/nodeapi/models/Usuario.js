@@ -4,15 +4,14 @@
 
 const mongoose = require('mongoose');
 
-//Creamos un esquema
+// Creamos un esquema
 const usuarioSchema = mongoose.Schema({
     email: {
-        String,
+        type: String,
         unique: true,
-        index:true
+        index: true
     },
     clave: String
 });
 
-
-mongoose.model('usuario', usuarioSchema);
+mongoose.model('Usuario', usuarioSchema);
