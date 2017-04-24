@@ -6,10 +6,15 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 
+
 //Conectamos a la base de datos
 require('./lib/connectMongoose');
 require('./models/Agente');
 require('./models/Usuario');
+
+
+var index = require('./index');
+var users = require('./users');
 
 var app = express();
 

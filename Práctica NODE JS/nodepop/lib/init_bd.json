@@ -1,0 +1,21 @@
+{
+  "users": [
+      {
+    "name": "Aaron",
+    "email": "aaron@gmail.com",
+    "password": "aaron"
+    },
+    {
+    "name": "Nacho",
+    "email": "nacho@gmail.com",
+    "password": "nacho"
+    }
+  ],
+  "ads": [{
+    "name": "Coke ad",
+    "state": "ON_SALE",
+    "price": 15,
+    "img_path": "./public/images/coke_ad.png",
+    "tags": ["work", "lifestyle", "motor", "mobile"]
+  }]
+}
