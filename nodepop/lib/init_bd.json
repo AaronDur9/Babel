@@ -1,21 +1,28 @@
 {
-  "users": [
-      {
-    "name": "Aaron",
-    "email": "aaron@gmail.com",
-    "password": "aaron"
-    },
-    {
-    "name": "Nacho",
-    "email": "nacho@gmail.com",
-    "password": "nacho"
-    }
-  ],
-  "ads": [{
-    "name": "Coke ad",
-    "state": "ON_SALE",
-    "price": 15,
-    "img_path": "./public/images/coke_ad.png",
-    "tags": ["work", "lifestyle", "motor", "mobile"]
-  }]
+    "users": [{
+            "name": "Aaron",
+            "email": "aaron@gmail.com",
+            "password": "aaron"
+        },
+        {
+            "name": "Nacho",
+            "email": "nacho@gmail.com",
+            "password": "nacho"
+        }
+    ],
+    "ads": [{
+            "name": "Coke",
+            "on_sale": false,
+            "price": 15,
+            "photo": "coke_ad.png",
+            "tags": ["work", "lifestyle", "motor", "mobile"]
+        },
+        {
+            "name": "Bicicleta",
+            "on_sale": true,
+            "price": 230.15,
+            "photo": "bici.jpg",
+            "tags": ["lifestyle", "motor"]
+        }
+    ]
 }

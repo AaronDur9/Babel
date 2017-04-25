@@ -13,15 +13,16 @@ const mongoose = require('mongoose');
 //Creamos un esquema
 const userSchema = mongoose.Schema({
     name: {
-        type: String, 
-        unique: true
+        type: String
     },
     email: {
-        type: String
+        type: String,
+        unique: true,
+        index: true
     },
     password: {
         type: String
-    } 
+    }
 });
 
 
@@ -45,4 +46,4 @@ agenteSchema.statics.list = function(userList,callback) {
 }
 */
 
-var User = mongoose.model('User', userSchema);
+mongoose.model('User', userSchema);

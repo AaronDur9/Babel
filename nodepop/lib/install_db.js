@@ -21,7 +21,7 @@ const fs = require('fs');
 const path = require('path');
 
 const MAX_USERS = 2;
-const MAX_ADS = 1;
+const MAX_ADS = 2;
 
 let initJson = '';
 

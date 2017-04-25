@@ -14,33 +14,51 @@ const mongoose = require('mongoose');
 const adSchema = mongoose.Schema({
     name: {
         type: String,
-        unique: true
+        unique: true,
+        index: true
     },
-    state: {
+    on_sale: {
         //De momento de tipo String y se comprueba por código
-        type: String
-        
+        type: Boolean,
+        index: true
+
         //En venta o se busca
         //enum: ['ON_SALE', 'WANTED']
         //default: 'ON_SALE'
 
     },
     price: {
-        type:Number,
-        min: 0
+        type: Number,
+        min: 0,
+        index: true
     },
-    img_path: String,
+    photo: String,
     //El array de tags solo puede tener 4 valores
     //De momento se comprueba mediante código, NO en el schema
-    tags: [] 
+    tags: {
+        type: [String],
+        index: true
+    }
 });
 
 
 
 
+adSchema.statics.list = function(criterios, limit, skip, sort, callback) {
 
+
+    const query = Ad.find(criterios);
+    query.limit(limit);
+    query.skip(skip);
+    //query.select(select);
+    query.sort(sort);
+    query.exec(callback);
+
+    //Agente.find(criterios).limit(limit).exec(callback);
+}
 
 var Ad = mongoose.model('Ad', adSchema);
+
 
 
 
