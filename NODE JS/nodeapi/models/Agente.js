@@ -16,15 +16,15 @@ const agenteSchema = mongoose.Schema({
 
 //Creamos método estático en el modelo
 //para recuperar lista de agentes según unos filtros
-agenteSchema.statics.list = function(criterios,limit,skip,select,sort,callback) {
-    
+agenteSchema.statics.list = function(criterios, limit, skip, select, sort, callback) {
+
 
     const query = Agente.find(criterios);
     query.limit(limit);
     query.skip(skip);
-    query.exec(callback);
     query.select(select);
     query.sort(sort);
+    query.exec(callback);
 
     //Lo anterior es igual que ...
     //Agente.find(criterios).limit(limit).exec(callback);
