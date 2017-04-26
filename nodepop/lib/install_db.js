@@ -20,7 +20,7 @@ const fs = require('fs');
 //path.join se encarga de añadir y eliminar barras inclinadas
 const path = require('path');
 
-const MAX_USERS = 2;
+const MAX_USERS = 1;
 const MAX_ADS = 2;
 
 let initJson = '';
@@ -96,20 +96,20 @@ function initBd() {
             //callback(err);
             console.log('Error al cargar el json');
             return;
-        } else {
-            //Ya está cargado el json en la variable datos
-            //Lo parseamos a json
-            //Borramos la base de datos
-            //Y añadimos los nuevos elementos
-            initJson = JSON.parse(datos);
-            removeUsers()
-                .then(removeAds)
-                .then(insertUsers)
-                .then(insertAds)
-                .catch((err) => {
-                    console.log("Error al inicializar la base de datos");
-                });
         }
+        //Ya está cargado el json en la variable datos
+        //Lo parseamos a json
+        //Borramos la base de datos
+        //Y añadimos los nuevos elementos
+        initJson = JSON.parse(datos);
+        removeUsers()
+            .then(removeAds)
+            .then(insertUsers)
+            .then(insertAds)
+            .catch((err) => {
+                console.log("Error al inicializar la base de datos");
+            });
+
     });
 
 }

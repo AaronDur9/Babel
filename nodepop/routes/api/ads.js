@@ -122,7 +122,7 @@ router.get('/', (req, res, next) => {
             next(err);
             return;
         }
-
+        res.json({ success: true, tags: ads });
     });
 });
 

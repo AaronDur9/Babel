@@ -35,9 +35,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Rutas de la aplicación
 app.use('/', require('./routes/index'));
-app.use('/api/users', require('./routes/api/users'));
-app.use('/api/ads', require('./lib/jwAuth'));
+app.use('/users', require('./routes/users'));
+app.use('/api', require('./lib/jwAuth'));
 app.use('/api/ads', require('./routes/api/ads'));
+app.use('/img/ads', require('./routes/api/images'));
 
 
 // catch 404 and forward to error handler

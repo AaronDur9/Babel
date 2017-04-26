@@ -10,7 +10,7 @@ const User = mongoose.model('User');
 
 
 const jwt = require('jsonwebtoken');
-const config = require('../../config');
+const config = require('../config');
 
 /*
 var  passModule  =  require('s-salt-pepper'); 
@@ -28,18 +28,12 @@ passModule.configure({    
 const pepper = 'You either die a hero or you live long enough to see yourself become the villain';
 var createHash = require('sha.js');
 
-var sha256 = createHash('sha256');
-var sha512 = createHash('sha512');
-
 var random = require('random-integer-number');
 
 
-//LEGACY, do not use in new systems: 
-var sha0 = createHash('sha');
-var sha1 = createHash('sha1');
-
-
 //const customError = require('../../modules/customError.js');
+
+/*
 
 // GET /api/users
 router.get('/', function(req, res, next) {
@@ -51,9 +45,9 @@ router.get('/', function(req, res, next) {
         res.json({ successs: true, result: users });
     });
 });
+*/
 
-
-// POST /api/users/register
+// POST /users/register
 router.post('/register', (req, res, next) => {
 
     const userInfo = req.body;
@@ -61,7 +55,8 @@ router.post('/register', (req, res, next) => {
 
 
     //Hash de la contraseña
-    const salt = random(); // => -372719865155431
+    const salt = random();
+    var sha256 = createHash('sha256');
     const newPass = userInfo.password + salt + pepper;
     const hash = sha256.update(newPass, 'utf8').digest('hex');
 
@@ -88,7 +83,7 @@ router.post('/register', (req, res, next) => {
 
 //Método de autenticación de los usuarios 
 //Recibimos en un post el email y la contraseña
-// POST /api/users/login
+// POST /users/login
 router.post('/login', (req, res, next) => {
     //Recibimos credenciales
     const email = req.body.email;
@@ -106,7 +101,10 @@ router.post('/login', (req, res, next) => {
         }
         //Si existe, comprobamos su pass
         const newPass = password + user.salt + pepper;
-
+        var sha256 = createHash('sha256');
+        console.log(password);
+        console.log(user.salt);
+        console.log(pepper);
         const hash = sha256.update(newPass, 'utf8').digest('hex');
 
 
