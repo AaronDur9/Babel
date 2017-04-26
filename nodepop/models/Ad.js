@@ -57,6 +57,7 @@ adSchema.statics.list = function(criterios, limit, skip, sort, callback) {
     //Agente.find(criterios).limit(limit).exec(callback);
 }
 
+
 var Ad = mongoose.model('Ad', adSchema);
 
 

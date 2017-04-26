@@ -122,8 +122,29 @@ router.get('/', (req, res, next) => {
             next(err);
             return;
         }
-        res.json({ successs: true, result: ads });
+
     });
+});
+
+
+//-- GET /api/ads/tags
+router.get('/tags', (req, res, next) => {
+
+
+    Ad.aggregate([
+
+        { $project: { tags: 1 } }, /* select the tags field as something we want to "send" to the next command in the chain */
+        { $unwind: '$tags' } /* this converts arrays into unique documents for counting */ ,
+        {
+            $group: { /* execute 'grouping' */
+                _id: '$tags' /* using the 'tag' value as the _id */
+            }
+        }
+    ], function(err, tags) {
+        res.json({ success: true, tags: tags });
+    });
+
+
 });
 
 //Devuelve la posición en la que aparece el símbolo
