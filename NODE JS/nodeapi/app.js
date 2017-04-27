@@ -31,14 +31,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-/*
-app.use(function(req, res, next) {
-    //en cada middleware tengo que responder o llamar a next.
-    console.log('URL:', req.originalUrl);
-    //next(new Error('fatal'));//res.send('ok');
-});
-
-*/
 
 //Rutas de la aplicación
 app.use('/', require('./routes/index'));
