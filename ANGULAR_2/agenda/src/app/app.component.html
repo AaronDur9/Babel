@@ -1,0 +1,21 @@
+<!--<ejemplos-binding></ejemplos-binding>-->
+<!--<ejemplos-componentes></ejemplos-componentes>-->
+
+
+<div class="container">
+    <header>
+        <h1>Mi agenda</h1>
+    </header>
+
+
+
+    <!--Necesitas poner [contactos] porque sin los corchetes solo le pasas la cadena 'contactos'-->
+    <!-- Nos subscribimos al evento seleccionado que lanza lista-contactos cuandp hacen click en un contacto y nos pasa el contacto seleccionado-->
+    <lista-contactos [contactos]="listaContactos" (seleccionado)="mostrarDetalles($event)"></lista-contactos>
+
+    <!-- El componente detalles-contacto necesita una variable contacto que será contactoSeleccionado de app.component-->
+    <detalles-contacto [contacto]="contactoSeleccionado"></detalles-contacto>
+
+    <ejemplos-inyeccion></ejemplos-inyeccion>
+
+</div>

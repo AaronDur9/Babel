@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        //Definimos una carpeta donde almacenar los .js y .map compilados
+        "outDir": "../build",
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": ["es2015", "dom"],
+        "noImplicitAny": true,
+        "suppressImplicitAnyIndexErrors": true
+    }
+}
