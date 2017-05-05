@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { CajaComponent} from './Ejemplos/caja.component';
@@ -10,6 +11,7 @@ import { ListaContactosComponent } from './lista-contactos/lista-contactos.compo
 import { ContactosService } from './servicios/contactos.service';
 import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto.component';
 import { Servicio1, EjemplosInyeccionComponent, Servicio2Provider } from './Ejemplos/ejemplos-inyeccion.component';
+import { FormularioContactoComponent } from './formulario-contacto/formulario-contacto.component';
 
 
 //Con esta línea añades un breakpoint a tu código
@@ -21,7 +23,8 @@ import { Servicio1, EjemplosInyeccionComponent, Servicio2Provider } from './Ejem
 @NgModule({
   imports:      [ // Metemos todos los módulos que necesita mi app
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
      ],
   declarations: [ // Metemos todos los componentes, directivas y pipes
      AppComponent,
@@ -30,7 +33,8 @@ import { Servicio1, EjemplosInyeccionComponent, Servicio2Provider } from './Ejem
      EjemplosComponentesComponent,
      ListaContactosComponent,
      DetallesContactoComponent,
-     EjemplosInyeccionComponent
+     EjemplosInyeccionComponent,
+     FormularioContactoComponent
      ],
      providers: [ // Metemos los servicios
       ContactosService,

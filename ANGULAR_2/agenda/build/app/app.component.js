@@ -18,7 +18,12 @@ var AppComponent = (function () {
         this._contactosService = _contactosService;
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.listaContactos = this._contactosService.obtenerContactos();
+        var _this = this;
+        //Obtener contactos devuelve un observable de una lista de contactos
+        this._contactosService.obtenerContactos()
+            .subscribe(function (contactos) {
+            _this.listaContactos = contactos;
+        });
     };
     AppComponent.prototype.mostrarDetalles = function (contacto) {
         this.contactoSeleccionado = contacto;
@@ -26,6 +31,10 @@ var AppComponent = (function () {
     AppComponent.prototype.navegarRuta = function (ruta) {
         console.log('navegar', ruta);
         window.open(ruta, '_blank');
+    };
+    AppComponent.prototype.guardarContacto = function (contacto) {
+        this._contactosService.guardarContacto(contacto)
+            .subscribe(function (contacto) { });
     };
     return AppComponent;
 }());

@@ -19,7 +19,12 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      this.listaContactos = this._contactosService.obtenerContactos();
+    //Obtener contactos devuelve un observable de una lista de contactos
+      this._contactosService.obtenerContactos()
+      //AL hacer subscribe me quito de en medio el observable y me quedo con la lista de cotactos
+      .subscribe(contactos => {
+        this.listaContactos = contactos;
+      });
   }
 
   mostrarDetalles(contacto: Contacto): void {
@@ -30,6 +35,12 @@ export class AppComponent implements OnInit {
   navegarRuta(ruta: string): void {
     console.log('navegar', ruta);
     window.open(ruta, '_blank');
+  }
+
+
+  guardarContacto(contacto: Contacto): void {
+    this._contactosService.guardarContacto(contacto)
+    .subscribe(contacto => {});
   }
 
 

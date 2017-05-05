@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var caja_component_1 = require("./Ejemplos/caja.component");
 var ejemplos_binding_component_1 = require("./Ejemplos/ejemplos-binding.component");
@@ -16,6 +17,7 @@ var lista_contactos_component_1 = require("./lista-contactos/lista-contactos.com
 var contactos_service_1 = require("./servicios/contactos.service");
 var detalles_contacto_component_1 = require("./detalles-contacto/detalles-contacto.component");
 var ejemplos_inyeccion_component_1 = require("./Ejemplos/ejemplos-inyeccion.component");
+var formulario_contacto_component_1 = require("./formulario-contacto/formulario-contacto.component");
 //Con esta línea añades un breakpoint a tu código
 //debugger;
 //@... es un decorador
@@ -30,7 +32,8 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            forms_1.FormsModule
+            forms_1.FormsModule,
+            http_1.HttpModule
         ],
         declarations: [
             app_component_1.AppComponent,
@@ -39,7 +42,8 @@ AppModule = __decorate([
             ejemplos_componentes_component_1.EjemplosComponentesComponent,
             lista_contactos_component_1.ListaContactosComponent,
             detalles_contacto_component_1.DetallesContactoComponent,
-            ejemplos_inyeccion_component_1.EjemplosInyeccionComponent
+            ejemplos_inyeccion_component_1.EjemplosInyeccionComponent,
+            formulario_contacto_component_1.FormularioContactoComponent
         ],
         providers: [
             contactos_service_1.ContactosService,

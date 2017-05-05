@@ -1,0 +1,25 @@
+button:disabled {
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+
+
+/*
+touched se pone a true cuando el usuario entra a un campo y sale.
+dirty se pone a true cuando el usuario cambia el valor de un campo.
+valid se ponea  true cuando un usuario cumple los requisitos de un campo.
+
+*/
+
+input.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+
+input.ng-touched.ng-valid {
+    border: 1px solid green;
+}
+
+.mensaje-error {
+    color: red;
+    margin-bottom: 20px;
+}

@@ -37,3 +37,9 @@ export class AppComponent {
 //GitHub de ejemplos de Angular
 
 https://github.com/jamg44/kc-angular-babel-2017
+
+
+
+//10 expresiones regulares
+http://web.ontuts.com/snippets/10-expresiones-regulares-imprescindibles-en-desarrollo-web/
+

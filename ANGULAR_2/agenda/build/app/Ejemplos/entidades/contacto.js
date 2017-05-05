@@ -2,6 +2,7 @@
 //Representa una entidad contacto
 var Contacto = (function () {
     function Contacto(id, nombre, apellidos, email, telefono, twitter, facebook, avatar) {
+        if (avatar === void 0) { avatar = ''; }
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
