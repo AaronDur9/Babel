@@ -27,5 +27,10 @@ export class AppComponent implements OnInit {
 
   }
 
+  navegarRuta(ruta: string): void {
+    console.log('navegar', ruta);
+    window.open(ruta, '_blank');
+  }
+
 
  }

@@ -1,7 +1,21 @@
-<div>
+<!-- Con la directiva *ngIf escribimos o no todo el elemento -->
+<div *ngIf="contacto">
     <!-- La interrogación hace que si contacto no tiene nada, devuelva null y no muestre nada-->
+
+    <!-- Avatar-->
+    <img [src]="contacto?.avatar" alt="avatar">
+
     <!-- Nombre del contacto-->
-    <h5>{{ contacto?.nombre }}</h5>
+    <h5>{{ contacto?.nombre }} {{contacto?.apellidos}}</h5>
+
+    <!-- Redes sociales-->
+    <button type="button" (click)="notificarFacebook()">
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+    </button>
+
+    <button type="button" (click)="notificarTwitter()">
+        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+    </button>
 
     <!-- Correo del contacto-->
     <span>{{contacto?.email}}</span>

@@ -20,6 +20,7 @@ Servicio1 = __decorate([
     core_1.Injectable()
 ], Servicio1);
 exports.Servicio1 = Servicio1;
+//Inyección usando un custom provider
 var Servicio2 = (function () {
     function Servicio2() {
     }

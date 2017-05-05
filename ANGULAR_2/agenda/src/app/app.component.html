@@ -14,7 +14,7 @@
     <lista-contactos [contactos]="listaContactos" (seleccionado)="mostrarDetalles($event)"></lista-contactos>
 
     <!-- El componente detalles-contacto necesita una variable contacto que será contactoSeleccionado de app.component-->
-    <detalles-contacto [contacto]="contactoSeleccionado"></detalles-contacto>
+    <detalles-contacto [contacto]="contactoSeleccionado" (verFacebook)="navegarRuta($event)" (verTwitter)="navegarRuta($event)"></detalles-contacto>
 
     <ejemplos-inyeccion></ejemplos-inyeccion>
 

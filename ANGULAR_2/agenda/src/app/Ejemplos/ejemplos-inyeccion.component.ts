@@ -7,7 +7,7 @@ export class Servicio1 {
 }
 
 
-
+//Inyección usando un custom provider
 export class Servicio2 {
     obtenerMensaje(): string { return 'Soy un servicio que usa proveedor de clase';}
 }
