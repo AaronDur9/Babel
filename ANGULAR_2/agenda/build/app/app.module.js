@@ -22,6 +22,7 @@ var app_routing_module_1 = require("./app-routing.module");
 var nuevo_contacto_component_1 = require("./nuevo-contacto/nuevo-contacto.component");
 var mis_contactos_component_1 = require("./mis-contactos/mis-contactos.component");
 var contactos_resolve_service_1 = require("./servicios/contactos-resolve.service");
+var direcciones_1 = require("./configuracion/direcciones");
 //Con esta línea añades un breakpoint a tu código
 //debugger;
 //@... es un decorador
@@ -56,7 +57,8 @@ AppModule = __decorate([
             contactos_service_1.ContactosService,
             ejemplos_inyeccion_component_1.Servicio1,
             ejemplos_inyeccion_component_1.Servicio2Provider,
-            contactos_resolve_service_1.ContactosResolve
+            contactos_resolve_service_1.ContactosResolve,
+            direcciones_1.ProveedorDirecciones
         ],
         bootstrap: [app_component_1.AppComponent] //Componente principal de nuestra app
     })

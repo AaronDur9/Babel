@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NuevoContactoComponent } from './nuevo-contacto/nuevo-contacto.component';
 import { MisContactosComponent } from './mis-contactos/mis-contactos.component';
 import { ContactosResolve } from './servicios/contactos-resolve.service';
+import { ProveedorDirecciones } from './configuracion/direcciones';
 
 
 //Con esta línea añades un breakpoint a tu código
@@ -47,7 +48,8 @@ import { ContactosResolve } from './servicios/contactos-resolve.service';
       ContactosService,
       Servicio1,
       Servicio2Provider,
-      ContactosResolve
+      ContactosResolve,
+      ProveedorDirecciones
      ],
   bootstrap:    [ AppComponent ] //Componente principal de nuestra app
 })
