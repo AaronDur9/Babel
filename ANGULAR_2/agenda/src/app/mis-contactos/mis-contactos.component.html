@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="six columns">
+
+        <!--Necesitas poner [contactos] porque sin los corchetes solo le pasas la cadena 'contactos'-->
+        <!-- Nos subscribimos al evento seleccionado que lanza lista-contactos cuandp hacen click en un contacto y nos pasa el contacto seleccionado-->
+        <lista-contactos [contactos]="listaContactos" (seleccionado)="mostrarDetalles($event)"></lista-contactos>
+    </div>
+    <div class="six columns">
+
+        <!-- El componente detalles-contacto necesita una variable contacto que será contactoSeleccionado de app.component-->
+        <detalles-contacto [contacto]="contactoSeleccionado" (verFacebook)="navegarRuta($event)" (verTwitter)="navegarRuta($event)"></detalles-contacto>`
+    </div>
+</div>

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'ejemplos-binding',
-    templateUrl: '/app/Ejemplos/ejemplos-binding.component.html',
+    templateUrl: './ejemplos-binding.component.html',
     styles: [`
     .caja {
       width: 50px;

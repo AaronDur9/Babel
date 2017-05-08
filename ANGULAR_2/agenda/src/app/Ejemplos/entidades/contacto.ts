@@ -4,7 +4,8 @@ export class Contacto {
 
     // método estático (de la clase Contacto)
     static desdeJSON(json: any): Contacto {
-        return new Contacto(json.id, 
+        return new Contacto(
+        json.id, 
         json.nombre, 
         json.apellidos, 
         json.email, 

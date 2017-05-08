@@ -6,7 +6,7 @@ import { Contacto } from '../Ejemplos/entidades/contacto';
 @Component({
     selector: 'formulario-contacto',
     templateUrl: '/app/formulario-contacto/formulario-contacto.component.html',
-    styleUrls: ['app/formulario-contacto/formulario-contacto.component.css']
+    styleUrls: ['./formulario-contacto.component.css']
 })
 
 export class FormularioContactoComponent{
@@ -15,7 +15,9 @@ export class FormularioContactoComponent{
     @Output() formularioAceptado: EventEmitter<Contacto> = new EventEmitter();
 
     notificarContacto(contactoForm: FormGroup) {
+        console.log(contactoForm.value);
         const contacto: Contacto = Contacto.desdeJSON(contactoForm.value);
+        
         this.formularioAceptado.emit(contacto);
 
     }

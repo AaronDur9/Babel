@@ -7,17 +7,25 @@
         <h1>Mi agenda</h1>
     </header>
 
-    <formulario-contacto (formularioAceptado)="guardarContacto($event)"></formulario-contacto>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li>
+                <a routerLink="/mis-contactos" routerLinkActive="seleccionado"> Mis contactos</a>
+            </li>
+            <li><a routerLink="/nuevo-contacto" routerLinkActive="seleccionado"> Nuevo contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Zona dinámica de páginas de la aplicación-->
+    <router-outlet>
 
 
 
-    <!--Necesitas poner [contactos] porque sin los corchetes solo le pasas la cadena 'contactos'-->
-    <!-- Nos subscribimos al evento seleccionado que lanza lista-contactos cuandp hacen click en un contacto y nos pasa el contacto seleccionado-->
-    <lista-contactos [contactos]="listaContactos" (seleccionado)="mostrarDetalles($event)"></lista-contactos>
 
-    <!-- El componente detalles-contacto necesita una variable contacto que será contactoSeleccionado de app.component-->
-    <detalles-contacto [contacto]="contactoSeleccionado" (verFacebook)="navegarRuta($event)" (verTwitter)="navegarRuta($event)"></detalles-contacto>
 
-    <ejemplos-inyeccion></ejemplos-inyeccion>
+
+        <!--<ejemplos-inyeccion></ejemplos-inyeccion>-->
+    </router-outlet>
 
 </div>

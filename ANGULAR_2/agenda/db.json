@@ -1,14 +1,33 @@
 {
-  "contactos": [
-    {
-      "nombre": "asdasd",
-      "apellidos": "asdasd",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "avatar": "",
-      "id": 1
-    }
-  ]
+    "contactos": [{
+            "nombre": "Tony ",
+            "apellidos": "Stark",
+            "email": "ironman@gmail.com",
+            "telefono": "12343546",
+            "twitter": "@iron_man",
+            "facebook": "ironman",
+            "avatar": "",
+            "id": 1
+        },
+        {
+            "nombre": "Steve",
+            "apellidos": "Rogers",
+            "email": "ohcaptain@gmail.com",
+            "telefono": "1231231231",
+            "twitter": "@america_captain",
+            "facebook": "captainRogers",
+            "avatar": "",
+            "id": 2
+        },
+        {
+            "nombre": "Matt",
+            "apellidos": "Murdock",
+            "email": "murdock_attorney@gmail.com",
+            "telefono": "123456777",
+            "twitter": "@hells_kitchen_devil",
+            "facebook": "daredevil",
+            "avatar": "",
+            "id": 3
+        }
+    ]
 }

@@ -12,6 +12,10 @@ import { ContactosService } from './servicios/contactos.service';
 import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto.component';
 import { Servicio1, EjemplosInyeccionComponent, Servicio2Provider } from './Ejemplos/ejemplos-inyeccion.component';
 import { FormularioContactoComponent } from './formulario-contacto/formulario-contacto.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NuevoContactoComponent } from './nuevo-contacto/nuevo-contacto.component';
+import { MisContactosComponent } from './mis-contactos/mis-contactos.component';
+import { ContactosResolve } from './servicios/contactos-resolve.service';
 
 
 //Con esta línea añades un breakpoint a tu código
@@ -24,7 +28,8 @@ import { FormularioContactoComponent } from './formulario-contacto/formulario-co
   imports:      [ // Metemos todos los módulos que necesita mi app
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
      ],
   declarations: [ // Metemos todos los componentes, directivas y pipes
      AppComponent,
@@ -34,12 +39,15 @@ import { FormularioContactoComponent } from './formulario-contacto/formulario-co
      ListaContactosComponent,
      DetallesContactoComponent,
      EjemplosInyeccionComponent,
-     FormularioContactoComponent
+     FormularioContactoComponent,
+     NuevoContactoComponent,
+     MisContactosComponent
      ],
      providers: [ // Metemos los servicios
       ContactosService,
       Servicio1,
-      Servicio2Provider
+      Servicio2Provider,
+      ContactosResolve
      ],
   bootstrap:    [ AppComponent ] //Componente principal de nuestra app
 })
