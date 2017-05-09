@@ -15,8 +15,16 @@ var core_1 = require("@angular/core");
 var contacto_1 = require("../Ejemplos/entidades/contacto");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
+require("rxjs/add/operator/share");
 var direcciones_1 = require("../configuracion/direcciones");
 var ContactosService = (function () {
+    /*
+    Creamos esta clase para añadir una capa de abstracción más.
+    Su función es realizar peticiones, recoger la información y mandársela debidamente a los componentes concretos.
+    Ejemplos:
+    Un método que hace una petición get para obtener todos los productos de la bd
+    Al componente que debe mostrar esa lista le pasarás un observable de una lista de productos
+    */
     function ContactosService(_http, _direcciones) {
         this._http = _http;
         this._direcciones = _direcciones;
@@ -41,9 +49,10 @@ var ContactosService = (function () {
             .map(function (res) {
             var rutaAvatar = res.text();
             rutaAvatar = rutaAvatar.replace(new RegExp('\"', 'g'), '');
-            console.log(res);
             return rutaAvatar;
-        });
+        }).share(); //Si te subscribes a un evento dos veces desde dos puntos distintos del código
+        // lo que ocurrirá será que se harán dos peticiones y te llegarán 2 respuestas a cada sitio donde te hayas subscrito
+        // Para solucionar esto puedes utilizar share() o desubscribirte cuando hayas acabado
     };
     // Creamos un contacto en el servidor
     ContactosService.prototype.guardarContacto = function (contacto) {

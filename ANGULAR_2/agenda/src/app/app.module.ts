@@ -1,7 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { CajaComponent} from './Ejemplos/caja.component';
@@ -17,6 +17,9 @@ import { NuevoContactoComponent } from './nuevo-contacto/nuevo-contacto.componen
 import { MisContactosComponent } from './mis-contactos/mis-contactos.component';
 import { ContactosResolve } from './servicios/contactos-resolve.service';
 import { ProveedorDirecciones } from './configuracion/direcciones';
+import { EjemplosObservablesComponent, EjemplosObservablesWikipediaComponent } from './Ejemplos/ejemplos-observables.component';
+import { EjemplosPipeComponent } from './Ejemplos/ejemplos-pipe.component';
+import { OrdenarPipe } from './pipes/ordenar.pipe';
 
 
 //Con esta línea añades un breakpoint a tu código
@@ -29,7 +32,8 @@ import { ProveedorDirecciones } from './configuracion/direcciones';
   imports:      [ // Metemos todos los módulos que necesita mi app
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpModule, 
+    JsonpModule,
     AppRoutingModule
      ],
   declarations: [ // Metemos todos los componentes, directivas y pipes
@@ -42,7 +46,11 @@ import { ProveedorDirecciones } from './configuracion/direcciones';
      EjemplosInyeccionComponent,
      FormularioContactoComponent,
      NuevoContactoComponent,
-     MisContactosComponent
+     MisContactosComponent,
+     EjemplosObservablesComponent,
+     EjemplosObservablesWikipediaComponent,
+     EjemplosPipeComponent,
+     OrdenarPipe
      ],
      providers: [ // Metemos los servicios
       ContactosService,
@@ -50,6 +58,8 @@ import { ProveedorDirecciones } from './configuracion/direcciones';
       Servicio2Provider,
       ContactosResolve,
       ProveedorDirecciones
+      
+
      ],
   bootstrap:    [ AppComponent ] //Componente principal de nuestra app
 })

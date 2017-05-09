@@ -2,11 +2,21 @@ import {Injectable, Inject } from "@angular/core";
 import { Contacto } from '../Ejemplos/entidades/contacto';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/share';
 import { Observable } from 'rxjs/Observable';
 import { Direcciones } from '../configuracion/direcciones';
 
 @Injectable()
 export class ContactosService {
+    /*
+    Creamos esta clase para añadir una capa de abstracción más.
+    Su función es realizar peticiones, recoger la información y mandársela debidamente a los componentes concretos.
+    Ejemplos:
+    Un método que hace una petición get para obtener todos los productos de la bd
+    Al componente que debe mostrar esa lista le pasarás un observable de una lista de productos
+    */ 
+
+
 
     constructor(private _http: Http,
                 @Inject(Direcciones) private _direcciones: any) {}
@@ -33,9 +43,11 @@ export class ContactosService {
            .map( res => {
                let rutaAvatar = res.text();
                rutaAvatar = rutaAvatar.replace(new RegExp('\"', 'g'), '');
-               console.log(res);
                return rutaAvatar;
-           });
+           }).share(); //Si te subscribes a un evento dos veces desde dos puntos distintos del código
+                        // lo que ocurrirá será que se harán dos peticiones y te llegarán 2 respuestas a cada sitio donde te hayas subscrito
+                        // Para solucionar esto puedes utilizar share() o desubscribirte cuando hayas acabado
+       
     }
 
 
