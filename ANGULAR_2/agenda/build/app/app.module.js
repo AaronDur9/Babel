@@ -26,6 +26,8 @@ var direcciones_1 = require("./configuracion/direcciones");
 var ejemplos_observables_component_1 = require("./Ejemplos/ejemplos-observables.component");
 var ejemplos_pipe_component_1 = require("./Ejemplos/ejemplos-pipe.component");
 var ordenar_pipe_1 = require("./pipes/ordenar.pipe");
+var ejemplos_directivas_component_1 = require("./Ejemplos/ejemplos-directivas.component");
+var ejemplos_directivas_directive_1 = require("./Ejemplos/ejemplos-directivas.directive");
 //Con esta línea añades un breakpoint a tu código
 //debugger;
 //@... es un decorador
@@ -59,7 +61,9 @@ AppModule = __decorate([
             ejemplos_observables_component_1.EjemplosObservablesComponent,
             ejemplos_observables_component_1.EjemplosObservablesWikipediaComponent,
             ejemplos_pipe_component_1.EjemplosPipeComponent,
-            ordenar_pipe_1.OrdenarPipe
+            ordenar_pipe_1.OrdenarPipe,
+            ejemplos_directivas_component_1.EjemplosDirectivasComponent,
+            ejemplos_directivas_directive_1.EjemplosDirectivasAtributoDirective
         ],
         providers: [
             contactos_service_1.ContactosService,

@@ -8,6 +8,6 @@
     <div class="six columns">
 
         <!-- El componente detalles-contacto necesita una variable contacto que será contactoSeleccionado de app.component-->
-        <detalles-contacto [contacto]="contactoSeleccionado" (verFacebook)="navegarRuta($event)" (verTwitter)="navegarRuta($event)"></detalles-contacto>`
+        <detalles-contacto [contacto]="contactoSeleccionado" (verFacebook)="navegarRuta($event)" (verTwitter)="navegarRuta($event)" (eliminar)="eliminarContacto($event)"></detalles-contacto>`
     </div>
 </div>

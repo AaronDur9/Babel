@@ -15,12 +15,16 @@ var DetallesContactoComponent = (function () {
         //Eventos que lanzamos para que el componente principal sepa que han pulsado en los botones
         this.verFacebook = new core_1.EventEmitter();
         this.verTwitter = new core_1.EventEmitter();
+        this.eliminar = new core_1.EventEmitter();
     }
     DetallesContactoComponent.prototype.notificarFacebook = function () {
         this.verFacebook.emit(this.contacto.generarRutaFacebook());
     };
     DetallesContactoComponent.prototype.notificarTwitter = function () {
         this.verTwitter.emit(this.contacto.generarRutaTwitter());
+    };
+    DetallesContactoComponent.prototype.notificarEliminacion = function () {
+        this.eliminar.emit(this.contacto);
     };
     return DetallesContactoComponent;
 }());
@@ -36,6 +40,10 @@ __decorate([
     core_1.Output(),
     __metadata("design:type", core_1.EventEmitter)
 ], DetallesContactoComponent.prototype, "verTwitter", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DetallesContactoComponent.prototype, "eliminar", void 0);
 DetallesContactoComponent = __decorate([
     core_1.Component({
         selector: 'detalles-contacto',

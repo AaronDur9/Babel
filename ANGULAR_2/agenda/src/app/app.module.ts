@@ -20,6 +20,8 @@ import { ProveedorDirecciones } from './configuracion/direcciones';
 import { EjemplosObservablesComponent, EjemplosObservablesWikipediaComponent } from './Ejemplos/ejemplos-observables.component';
 import { EjemplosPipeComponent } from './Ejemplos/ejemplos-pipe.component';
 import { OrdenarPipe } from './pipes/ordenar.pipe';
+import { EjemplosDirectivasComponent } from './Ejemplos/ejemplos-directivas.component';
+import { EjemplosDirectivasAtributoDirective } from './Ejemplos/ejemplos-directivas.directive';
 
 
 //Con esta línea añades un breakpoint a tu código
@@ -50,7 +52,9 @@ import { OrdenarPipe } from './pipes/ordenar.pipe';
      EjemplosObservablesComponent,
      EjemplosObservablesWikipediaComponent,
      EjemplosPipeComponent,
-     OrdenarPipe
+     OrdenarPipe,
+     EjemplosDirectivasComponent,
+     EjemplosDirectivasAtributoDirective
      ],
      providers: [ // Metemos los servicios
       ContactosService,

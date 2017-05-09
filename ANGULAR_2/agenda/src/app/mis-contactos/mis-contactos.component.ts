@@ -43,4 +43,26 @@ ngOnInit(): void {
     console.log('navegar', ruta);
     window.open(ruta, '_blank');
   }
+
+  eliminarContacto(contacto: Contacto) {
+    if(confirm(`¿Estás seguro que quieres eliminar a ${contacto.nombre}`)) {
+      this._contactosService
+      .eliminarContacto(contacto)
+      .subscribe(() => {
+        // Eliminamos el contacto de this.listaContactos
+        const indice: number = 
+        this.listaContactos
+        .findIndex((element: Contacto) => {
+            return element.id === contacto.id;
+        });
+        if(indice != -1) {
+          // Lo elimino de la lista
+          this.listaContactos.splice(indice, 1);
+
+          // Lo quito de seleccionado
+          this.contactoSeleccionado = null;
+          }
+      });
+    }
+  }
 }

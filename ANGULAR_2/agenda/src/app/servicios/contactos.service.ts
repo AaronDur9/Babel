@@ -62,11 +62,9 @@ export class ContactosService {
 
 
     // eliminamos un contacto del servidor
-    eliminarContacto(contacto: Contacto): Observable<Contacto> {
+    eliminarContacto(contacto: Contacto): Observable<any> {
         return this._http
-        .delete(`${this._direcciones.servidor}/contactos/${contacto.id}`)
-        .map(res => Contacto.desdeJSON(res.json()));
-
+        .delete(`${this._direcciones.servidor}/contactos/${contacto.id}`);
     } 
 
     // Actualizamos un contacto en el servidor
