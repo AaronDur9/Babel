@@ -1,0 +1,82 @@
+#movies {
+    div {
+        width: 100%;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        picture {
+            width: 100%;
+        }
+        img {
+            width: 90%;
+            height: 500px;
+            transition: box-shadow 0.3s, transform 0.3s;
+            will-change: box-shadow, transform;
+            &:hover {
+                box-shadow: 10px 10px 40px #444;
+                transform: scale(1.05);
+            }
+            //Esta mediaQuery afecta a su padre más cercano
+            //Es decir, el img cambiará según el tamaño de la pantalla
+            //De la forma en la que se haya dicho al declarar el mixin mobile
+            @include mobile {
+                object-fit: contain;
+            }
+        }
+        &.over {
+            filter: blur(3px);
+        }
+        p {
+            width: 85%;
+        }
+    }
+}
+
+
+/*Estas mediaQuerys se aplican siempre que el tamaño de pantall sea menor a 960 px Y si alguna de las de abajo también se cumple se acumulan
+*/
+
+
+/*@media all and (max-width: 680px) {
+    #movies div {
+        flex wrap para que vayan cayendo flex-wrap: wrap;
+    }
+}
+*/
+
+
+/*Si el tamaño de pantalla está en ese rango se mostrarán 3 películas y las demás caerán*/
+
+
+/*@media all and (min-width: 521px) and (max-width: 680px) {
+    #movies article {
+        width: 50%;
+    }
+}
+*/
+
+
+/*Si el tamaño de pantalla está en ese rango se mostrarán 3 películas y las demás caerán*/
+
+
+/*
+@media all and (min-width: 681px) and (max-width: 960px) {
+    #movies article {
+        width: 33%;
+    }
+}*/
+
+
+/*Si el tamaño es pequeño, tipo móvil, solo se muestra una película por fila y las demás caen
+*/
+
+
+/*
+@media all and (max-width: 520px) {
+    #movies article {
+        width: 100%;
+    }
+}
+*/

@@ -1,0 +1,20 @@
+{
+    "name": "Avengers",
+    "homepage": "https://github.com/AaronDur9/Babel",
+    "authors": [
+        "Aarón Durán <aaron.duran@babel.es>"
+    ],
+    "description": "An example project",
+    "main": "",
+    "keywords": [
+        "babel",
+        "keepcoding",
+        "learning",
+        "front-end"
+    ],
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "bootstrap": "^3.3.7"
+    }
+}

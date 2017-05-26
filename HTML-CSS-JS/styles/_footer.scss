@@ -1,0 +1,22 @@
+.footer {
+    background-color: $primary-color;
+    .footer-item {
+        display: inline-block;
+        a {
+            color: $inverse-color;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+    }
+    .footer-copyright {
+        text-align: right;
+        mark {
+            background-color: transparent;
+            color: $inverse-color;
+        }
+        time {
+            color: $inverse-color;
+            margin-right: 15px;
+        }
+    }
+}
