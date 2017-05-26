@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+    // Todo lo que almacenamos en web storage es de tipo string
+    // 
+    // 
+    // LocalStorage persiste aunque cerremos la pestaña, navegador, apaguemos el ordenador
+    // SessionStorage al cerrar la pestaña se pierde la información. Nos sirve para el concepto de sesión de usuario
+
+
+    if (localStorage.getItem("pageSize")) {
+        console.log("Ya existe");
+    } else {
+        localStorage.setItem("pageSize", 10);
+
+    }
+
+
+    localStorage.setItem("obj", JSON.stringify({
+        val1: true
+    }));
+
+
+
+    //Getter
+    var size = localStorage.getItem("pageSize");
+    console.log(size);
+
+    var obj = localStorage.getItem("obj");
+
+    console.log(JSON.parse(obj));
+    </script>
+</body>
+
+</html>

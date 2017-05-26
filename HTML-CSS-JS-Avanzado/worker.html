@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+    // Creamos un web worker
+    var worker = new Worker('worker.js');
+
+    //Podemos terminar su ejecución.
+
+
+
+    //Recibir notificaciones
+    worker.onmessage = function(event) {
+
+        //En event.data tenemos el dato notificado
+        console.log(event);
+        // worker.terminate();
+        // worker = undefined;
+    }
+    </script>
+</body>
+
+</html>

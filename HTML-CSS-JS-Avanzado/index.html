@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<div id="flower" data-width="30%" data-leaves="47" data-plant-height="2.4m"></div>
+
+<body>
+    <!-- Definir y acceder a atributos de html con js-->
+    <script>
+    var plant = document.getElementById('flower');
+    console.log(plant.dataset.leaves);
+    console.log(plant.dataset.plantHeight);
+
+    plant.dataset.plantHeight = '3.6m';
+    console.log(plant.dataset.plantHeight);
+    </script>
+</body>
+
+</html>

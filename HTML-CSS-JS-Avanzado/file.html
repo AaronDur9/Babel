@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <label>
+        select file
+        <input id="fileInput" type="file">
+    </label>
+    <img id="imagen">
+    <div id="display"></div>
+    <script>
+    var fileInput = document.getElementById('fileInput');
+    fileInput.addEventListener('change', function(e) {
+        var display = document.getElementById('display');
+        var file = document.getElementById('fileInput').files[0];
+        var textType = /image.*/;
+        var url = URL.createObjectURL(file);
+        if (file.type.match(textType)) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                    display.innerText = reader.result;
+                    imagen.src = reader.result;
+                }
+                //reader.readAsText(file); // como texto
+            reader.readAsDataURL(file); // devuelve datos en base64
+            //reader.readAsBinaryString(file); // datos binarios
+            //reader.createObjectURL(file);
+        } else {
+            display.innerText = "Archivo no soportado!"
+        }
+    });
+    </script>
+</body>
+
+</html>
