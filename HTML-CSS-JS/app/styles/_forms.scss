@@ -1,0 +1,64 @@
+form {
+    font-size: 1.5em;
+    margin-bottom: 50px;
+    button[type="submit"] {
+        margin: 0 auto;
+        display: block;
+    }
+    label {
+        width: 150px;
+        display: inline-block;
+        text-transform: capitalize;
+    }
+}
+
+.form-group {
+    margin: 15px;
+    input, textarea {
+        transition: border-color 0.3s;
+        &:focus, &:invalid:focus {
+            outline: none;
+            border-color: #999;
+        }
+        &:invalid {
+            border-color: red;
+        }
+        &:valid {
+            border-color: green;
+        }
+    }
+}
+
+.form-radio {
+    margin: 15px;
+    label {
+        width: initial;
+    }
+    input {
+        margin-right: 20px;
+    }
+}
+
+.btn {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.2);
+        &:disabled {
+            border-color: #ddd;
+        }
+    }
+    &:focus {
+        border-color: #ccc;
+        outline: none;
+    }
+    &:active {
+        transform: scale(0.9);
+        color: white;
+        background-color: #999;
+    }
+    &:disabled {
+        color: #ddd;
+        cursor: default;
+    }
+}
